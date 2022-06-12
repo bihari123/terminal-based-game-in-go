@@ -1,4 +1,13 @@
 ---
+dbconfig:
+  dblog: false 
+  maxidleconss: 10
+  maxopenconnection: 100
+  username: "root"
+  password: "root"
+  databasehost: "localhost"
+  schemaname: "game"  
+  drivername: "mysql"  
 appconfig:
   mode: prod
   accesslogfile: access_dbapp

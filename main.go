@@ -5,8 +5,13 @@ import (
 	"runtime"
 	"runtime/debug"
 
+	"github.com/bihari123/terminal-based-game-in-go/dbmodel"
 	"github.com/bihari123/terminal-based-game-in-go/helper"
 	"github.com/bihari123/terminal-based-game-in-go/loghelper"
+)
+
+var(
+	DB *dbmodel.DB  
 )
 
 // ProvisionService - Struct for provisioning service
@@ -20,6 +25,15 @@ func (ps *ProvisionService) Run(){
 
   loghelper.ConfigLogurus(myConfig)
   setUpProcess()
+
+  db,err:=dbmodel.Init(myConfig)
+  if err!=nil{
+  	panic(err.Error())
+  }
+  DB=db
+
+  sqlDb,_:=db.DB.DB()
+  defer sqlDb.Close()
 }
 
 func setUpProcess(){

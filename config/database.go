@@ -5,7 +5,7 @@ type DBConfiguration struct {
 	MaxIdleConns int
 	MaxOpenConns int
 	Databasehost string
-	DbName       string
+	Schemaname       string
 	Username     string
 	Password     string
 	Drivername   string
