@@ -1,5 +1,6 @@
 ---
 appconfig:
+  mode: prod
   accesslogfile: access_dbapp
   host: "localhost"
   logfile: gamelogs

@@ -7,4 +7,5 @@ type AppConfiguration struct {
 	AccessLogFile string
 	LogFolder     string
 	LogFile       string
+	Mode          string
 }
