@@ -1,0 +1,48 @@
+---
+appconfig:
+  accesslogfile: access_dbapp
+  host: "localhost"
+  logfile: gamelogs
+  logfolder: /tmp/applog/game 
+  loglevel: info
+  port: 8081
+services: 
+  metadata:
+    endpoint: "http://localhost:8080"
+    headers:
+      Content-Type: application/json
+      X-Session-Token: abcdefgh
+    protocol: http
+    async: false
+  tokenxchange:
+    endpoint: "http://localhost:8082"
+    headers:
+      Content-Type: application/json
+      X-Session-Token: abcdefgh
+    protocol: http
+    async: false
+  gamelogic:
+    endpoint: "http://localhost:8083"
+    headers:
+      Content-Type: application/json
+      X-Session-Token: abcdefgh
+    protocol: http
+    async: false
+  dataingestion:
+    endpoint: "http://localhost:8080"
+    headers:
+      Content-Type: application/json
+      X-Session-Token: abcdefgh
+    protocol: http
+    async: false
+  terminal:
+    endpoint: "http://localhost:8081"
+    headers:
+      Content-Type: application/json
+      X-Session-Token: abcdefgh
+    protocol: http
+    async: false
+          
+        
+      
+
