@@ -4,4 +4,5 @@ type Configuration struct {
   AppConfig AppConfiguration 
   Services ServiceConfiguration
   DBConfig DBConfiguration 
+  Oauth OauthConfig 
 }

@@ -6,7 +6,7 @@ import (
 )
 
 // open opens the specified URL in the default browser of the user.
-func openUrl(url string) error {
+func OpenUrl(url string) error {
     var cmd string
     var args []string
 

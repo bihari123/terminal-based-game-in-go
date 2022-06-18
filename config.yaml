@@ -15,7 +15,12 @@ appconfig:
   logfile: gamelogs
   logfolder: /tmp/applog/game 
   loglevel: info
-  port: 8081
+  port: 8086  #changed it to 8086 bcoz web service is not running as an independent service
+oauth:
+  google:
+    clientid: "899222173944-dfarhm2j91oe15p7olsfmiuopklvcse7.apps.googleusercontent.com"
+    clientsecret: "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"
+    redirect: "http://localhost:8086/auth/google/callback"  
 services: 
   metadata:
     endpoint: "http://localhost:8080"
@@ -39,20 +44,27 @@ services:
     protocol: http
     async: false
   dataingestion:
-    endpoint: "http://localhost:8080"
+    endpoint: "http://localhost:8084"
     headers:
       Content-Type: application/json
       X-Session-Token: abcdefgh
     protocol: http
     async: false
   terminal:
-    endpoint: "http://localhost:8081"
+    endpoint: "http://localhost:8085"
     headers:
       Content-Type: application/json
       X-Session-Token: abcdefgh
     protocol: http
     async: false
-          
+  webservice:
+    endpoint: "http://localhost:8086"
+    headers:
+      Content-Type: application/json
+      X-Session-Token: abcdefgh
+    protocol: http
+    async: false
+           
         
       
 
