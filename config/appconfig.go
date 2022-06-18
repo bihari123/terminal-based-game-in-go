@@ -1,7 +1,7 @@
 package config
 
 type AppConfiguration struct {
-	Host          string
+	Host          string 
 	Port          int
 	LogLevel      string
 	AccessLogFile string
