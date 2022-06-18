@@ -16,11 +16,6 @@ appconfig:
   logfolder: /tmp/applog/game 
   loglevel: info
   port: 8086  #changed it to 8086 bcoz web service is not running as an independent service
-oauth:
-  google:
-    clientid: "899222173944-dfarhm2j91oe15p7olsfmiuopklvcse7.apps.googleusercontent.com"
-    clientsecret: "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"
-    redirect: "http://localhost:8086/auth/google/callback"  
 services: 
   metadata:
     endpoint: "http://localhost:8080"
